@@ -100,12 +100,7 @@ public class test {
     titre.setForeground(Color.DARK_GRAY);
     titre.setFont(new Font(titre.getFont().getName(), titre.getFont().getStyle(), (int) (titre.getFont().getSize() * 1.5)));
     panelHaut.add(titre);
-    
- //   mainPanel.add(tournoi);
- //   mainPanel.add(vsIA);    
- //   mainPanel.add(deuxJoueurs);               
- //   mainPanel.add(regles);
- //   mainPanel.add(quitter);            
+              
             
             
     window.setVisible(true);        
