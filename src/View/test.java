@@ -55,6 +55,8 @@ public class test {
     window.setTitle("Menu principal");
     window.setLocationRelativeTo(null);
     
+    window.setResizable(false);
+    
     //Placement des différents éléments et création de panels
     JPanel mainPanel = new JPanel(new BorderLayout());
     window.add(mainPanel);
