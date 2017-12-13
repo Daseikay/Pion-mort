@@ -6,21 +6,37 @@ package Model;
  * and open the template in the editor.
  */
 
-import java.awt.Color;
-
 /**
  *
  * @author Théo
  */
 public class Joueur {
+    private String pseudo;
+    private Symbole symbole;
     
-    public String symbole;
     
-    public Color couleur;
-    
-    public Joueur(String symbole, Color couleur){
+    public Joueur(String pseudo, Symbole symbole){
+        this.pseudo = pseudo;
         this.symbole = symbole;
-        this.couleur = couleur;
     }
-   
+
+    /**
+     * @return the pseudo
+     */
+    public String getPseudo() {
+        return pseudo;
+    }
+
+    /**
+     * @return the symbole
+     */
+    public Symbole getSymbole() {
+        return symbole;
+    }
+    
+    @Override
+    public String toString(){
+        return this.pseudo + "(" + this.symbole + ")";
+    }
+      
 }

@@ -59,15 +59,19 @@ public class test {
     
     //Placement des différents éléments et création de panels
     JPanel mainPanel = new JPanel(new BorderLayout());
+    //mainPanel.setBackground(Color.WHITE);
     window.add(mainPanel);
     
     JPanel panelHaut = new JPanel();
+    //panelHaut.setBackground(Color.WHITE);
     mainPanel.add(panelHaut, BorderLayout.NORTH);
     
     JPanel panelBas = new JPanel(new BorderLayout());
+    //panelBas.setBackground(Color.WHITE);
     mainPanel.add(panelBas, BorderLayout.SOUTH);
     
     JPanel panelCentre = new JPanel(new GridBagLayout());
+    //panelCentre.setBackground(Color.WHITE);
     mainPanel.add(panelCentre, BorderLayout.CENTER);
     
     GridBagConstraints gbc = new GridBagConstraints();
@@ -94,10 +98,7 @@ public class test {
     panelBas.add(regles, BorderLayout.WEST);
     panelBas.add(quitter, BorderLayout.EAST);
     
-
-    
-    
-    
+ 
     JLabel titre = new JLabel("MORPION");
     titre.setForeground(Color.DARK_GRAY);
     titre.setFont(new Font(titre.getFont().getName(), titre.getFont().getStyle(), (int) (titre.getFont().getSize() * 1.5)));
