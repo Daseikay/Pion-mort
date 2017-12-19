@@ -44,45 +44,9 @@ public class MainMenu extends Observable {
         window.setVisible(true);
         
     }
-        //Ouverture de la fenètre rêgles quand click sur btn//
-    public MainMenu (JButton regles){
-    regles.addMouseListener(
-            new MouseListener(){
-            
-        @Override
-        public void mouseClicked(MouseEvent e) {
-            System.out.println("On a cliquer sur le bouton 'rêgles' ");
-        }
-
-        @Override
-        public void mousePressed(MouseEvent e) {   
-        }
-
-        @Override
-        public void mouseReleased(MouseEvent e) { 
-        }
-
-        @Override
-        public void mouseEntered(MouseEvent e) {
-        }
-
-        @Override
-        public void mouseExited(MouseEvent e) {
-        }
-                
-                
-            
-            }
-    
-    
-    );
-    
-    
-    
-    
-    
+     
     }
-}
+
     
     
     
