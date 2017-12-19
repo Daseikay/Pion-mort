@@ -5,10 +5,27 @@
  */
 package Controller;
 
+import java.util.Observable;
+import java.util.Observer;
+
 /**
  *
  * @author avognonm
  */
-public class Controller {
+public abstract class Controller implements Observer {
+    
+    
+    
+    
+    @Override
+    public void update(Observable o, Object arg){
+        System.out.println("On a cliquer sur le bouton 'rêgles' ");
+    }
+    
+    
+    
+    
+    
+    
     
 }
