@@ -49,6 +49,7 @@ public class testRules {
         
         window.add(pan);
         
+        window.setResizable(false);
         window.setVisible(true);
         
         
