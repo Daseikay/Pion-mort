@@ -5,10 +5,24 @@
  */
 package mvc;
 
+import Controller.Controller;
+
 /**
  *
  * @author Théo
  */
 public class Main {
     
+    
+    
+    
+    
+    
+    
+    public void Main(String[] args){
+    Observé MainMenu= new Observé();
+    Observateur Contoller = new Observateur();
+    Observé.addObserver(Controller);
+    
+    }
 }

@@ -13,6 +13,4 @@ public class Case {
     
     public Joueur joueur;
     
-    
-    
 }
