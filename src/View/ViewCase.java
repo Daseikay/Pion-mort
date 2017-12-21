@@ -39,8 +39,8 @@ public class ViewCase {
         bouton = new JButton();
         label = new JLabel();
         
-        setLayout(new BorderLayout());
-        add(bouton, BorderLayout.CENTER);
+        label.setLayout(new BorderLayout());
+        label.add(bouton, BorderLayout.CENTER);
         
 	bouton.addActionListener(new ActionListener() {
 

@@ -19,6 +19,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 /**
  *
@@ -27,18 +28,53 @@ import javax.swing.JTextField;
 public class Rules extends Observable {
     
     private final JFrame windows;
-    private final JButton exit;
+    private final JButton btnexit;
+    private final JPanel mainPanels;
+    private final JPanel panelBoutons ;
+    private final JLabel règle;
+    
+    
     
     public Rules(){
         windows = new JFrame();
         windows.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
-        windows.setSize(800,500);
-        windows.setTitle("Rêgles");
+        windows.setSize(800,125);
+        windows.setTitle("Règles");
         windows.setLocationRelativeTo(null);
+        mainPanels = new JPanel(new GridLayout(2,1));
+        windows.add(mainPanels);
         
-        windows.setVisible(true);
+        
+        
+        règle = new JLabel("<html><body>Les règles de ce jeu sont très simples.<br />"
+                + "Pour gagner, un des deux joueurs doit aligner n formes."
+                + "<br />'n' étant le nombre de lignes/colonnes de la grille de jeu.</body></html>", SwingConstants.CENTER);
+        
+      mainPanels.add(règle);
+      
+        
+     this.panelBoutons = new JPanel(new GridLayout(1,2));
+     this.panelBoutons.setOpaque(false);
+     mainPanels.add(this.panelBoutons, BorderLayout.SOUTH);
+     
+     this.btnexit = new JButton("Exit") ;
+     panelBoutons.add(btnexit);
     
+     panelBoutons.add(new JLabel(""));
+     
+     
+     windows.setVisible(true);
+        
     }
+
+
+
     
+     public static void main(String [] args) {
+        // Instanciation de la fenêtre 
+        Rules vuereg = new Rules();
+}
+
+
     
 }
