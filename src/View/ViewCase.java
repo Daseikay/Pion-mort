@@ -41,17 +41,6 @@ public class ViewCase {
         
         label.setLayout(new BorderLayout());
         label.add(bouton, BorderLayout.CENTER);
-        
-	bouton.addActionListener(new ActionListener() {
-
-            @Override
-		public void actionPerformed(ActionEvent evenement) {
-			jouer();
-		}
-
-	});
-
-    }
     
     
 
@@ -59,4 +48,4 @@ public class ViewCase {
     
     
     
-}
+}}

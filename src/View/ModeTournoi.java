@@ -16,8 +16,7 @@ import javax.swing.JFrame;
 public class ModeTournoi {
 
     private final JFrame window;
-    private final JButton launchgame;
-    private final JButton retour;
+
     
     
         public ModeTournoi(){

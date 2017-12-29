@@ -14,11 +14,8 @@ import javax.swing.JTextField;
  * @author avognonm
  */
 public class ModeSolo {
-    
+
     private final JFrame window;
-    private final JButton launchgame;
-    private final JButton retour;
-    private final JTextField pseudoj1;
     
     
         public ModeSolo(){

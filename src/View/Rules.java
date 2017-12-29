@@ -5,9 +5,7 @@
  */
 package View;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.GridLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.Year;
@@ -25,52 +23,45 @@ import javax.swing.SwingConstants;
  *
  * @author avognonm
  */
-public class Rules extends Observable {
+public class Rules extends View {
     
-    private final JFrame windows;
-    private final JButton btnexit;
-    private final JPanel mainPanels;
-    private final JPanel panelBoutons ;
-    private final JLabel règle;
-    
-    
-    
+    private final JFrame window;
+    private final JPanel mainPanel;
+
+
+
     public Rules(){
-        windows = new JFrame();
-        windows.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
-        windows.setSize(800,125);
-        windows.setTitle("Règles");
-        windows.setLocationRelativeTo(null);
-        mainPanels = new JPanel(new GridLayout(2,1));
-        windows.add(mainPanels);
-        
-        
-        
-        règle = new JLabel("<html><body>Les règles de ce jeu sont très simples.<br />"
+        // Définition des éléments de l'IHM
+
+        //Création de l'IHM
+
+        window = new JFrame();
+        window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        window.setSize(800,100);
+        window.setTitle("Règles");
+        window.setLocationRelativeTo(null);
+
+        mainPanel = new JPanel();
+        //pan.setBackground(Color.WHITE);
+
+        JLabel text = new JLabel("<html><body>Les règles de ce jeu sont très simples.<br />"
                 + "Pour gagner, un des deux joueurs doit aligner n formes."
-                + "<br />'n' étant le nombre de lignes/colonnes de la grille de jeu.</body></html>", SwingConstants.CENTER);
-        
-      mainPanels.add(règle);
-      
-        
-     this.panelBoutons = new JPanel(new GridLayout(1,2));
-     this.panelBoutons.setOpaque(false);
-     mainPanels.add(this.panelBoutons, BorderLayout.SOUTH);
-     
-     this.btnexit = new JButton("Exit") ;
-     panelBoutons.add(btnexit);
-    
-     panelBoutons.add(new JLabel(""));
-     
-     
-     windows.setVisible(true);
-        
+                + "<br />'n' étant le nombre de lignes/colonnes de la grille de jeu.</body></html>");
+        mainPanel.add(text);
+
+        window.add(mainPanel);
+
+        window.setResizable(false);
+
+    }
+
+    @Override
+    public void setVisible(Boolean b) {
+        window.setVisible(b);
     }
 
 
-
-    
-     public static void main(String [] args) {
+    public static void main(String [] args) {
         // Instanciation de la fenêtre 
         Rules vuereg = new Rules();
 }

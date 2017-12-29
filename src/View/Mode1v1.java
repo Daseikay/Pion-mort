@@ -5,10 +5,13 @@
  */
 package View;
 
+import Controller.Message;
 import Model.Forme;
 import static Model.Forme.*;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -22,7 +25,7 @@ import javax.swing.SwingConstants;
  *
  * @author avognonm
  */
-public class Mode1v1 {
+public class Mode1v1 extends View {
     private final JFrame window;
     private final JButton btnlaunchgame;
     private final JButton btnretour;
@@ -84,14 +87,28 @@ public class Mode1v1 {
         mainPanels.add(new JLabel());
         
         window.add(this.panelBoutons, BorderLayout.SOUTH);
-        
-        
-        
-        window.setVisible(true);
 
-        }    
-        
-         public static void main(String [] args) {
+        /* GESTION DES ACTION LISTENERS */
+
+        btnretour.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setChanged();
+                notifyObservers(Message.RETOUR);
+                clearChanged();
+            }
+        });
+
+
+
+        }
+
+    @Override
+    public void setVisible(Boolean b) {
+        window.setVisible(b);
+    }
+
+    public static void main(String [] args) {
         // Instanciation de la fenêtre 
         Mode1v1 md1v1 = new Mode1v1();
     }

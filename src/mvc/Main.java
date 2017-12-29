@@ -12,17 +12,12 @@ import Controller.Controller;
  * @author Théo
  */
 public class Main {
-    
-    
-    
-    
-    
-    
-    
-    public void Main(String[] args){
-    Observé MainMenu= new Observé();
-    Observateur Contoller = new Observateur();
-    Observé.addObserver(Controller);
-    
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Controller controleur = new Controller();
     }
+
 }
