@@ -7,8 +7,25 @@ package Model;
 
 /**
  *
- * @author barrerat
+ * @author Théo
  */
 public class Coup {
+    
+    private Joueur joueur;
+    private Case caseJouee;
+
+    public Coup(Joueur joueur, Case caseJouee){
+        this.joueur = joueur;
+        this.caseJouee = caseJouee;
+    }
+
+    public Joueur getJoueur() {
+        return joueur;
+    }
+
+    public int getNumCase() {
+        return caseJouee.getNumero();
+    }
+
     
 }

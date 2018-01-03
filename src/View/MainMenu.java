@@ -143,6 +143,26 @@ public class MainMenu extends View {
                 clearChanged();
             }
         });
+
+        //Quitter le jeu
+        quitter.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setChanged();
+                notifyObservers(Message.QUITTER);
+                clearChanged();
+            }
+        });
+
+        //Mode solo pas encore géré
+        vsIA.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setChanged();
+                notifyObservers(Message.IA);
+                clearChanged();
+            }
+        });
         
     }
 

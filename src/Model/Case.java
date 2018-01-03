@@ -10,7 +10,15 @@ package Model;
  * @author Théo
  */
 public class Case {
-    
-    public Joueur joueur;
-    
+
+    private int numC;
+
+    public Case (int numC){
+        this.numC = numC + 1;   //Retourne le numéro de la case sur la grille (+1 car stockée dans une ArrayList de cases)
+    }
+
+    public int getNumero() {
+        return numC;
+    }
+
 }

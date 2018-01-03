@@ -12,15 +12,17 @@ import java.util.Observer;
 import Model.*;
 import View.*;
 
+import javax.swing.*;
+
 /**
  *
  * @author avognonm
  */
-public class Controller implements Observer {
+public class MenuController extends AbstractController {
 
     private ArrayList<View> views = new ArrayList<>();
 
-    public Controller(){
+    public MenuController(){
 
         //Création des vues
         MainMenu mainMenu = new MainMenu();
@@ -43,7 +45,7 @@ public class Controller implements Observer {
     @Override
     public void update(Observable o, Object arg){
         if(arg == Message.DEUXJOUEURS){
-            ((MainMenu) o).setVisible(false);
+            ((View) o).setVisible(false);
             views.get(1).setVisible(true);
         }
 
@@ -52,12 +54,20 @@ public class Controller implements Observer {
         }
 
 
+        if(arg == Message.QUITTER){
+            ((View) o).setVisible(false);
+        }
 
+
+        if(arg == Message.IA){
+            JOptionPane erreur = new JOptionPane();
+            erreur.showMessageDialog(null, "Mode de jeu indisponible.", "Erreur", JOptionPane.ERROR_MESSAGE);
+        }
 
 
         // Pour la vue "Mode1v1"
         if(arg == Message.RETOUR){
-            ((Mode1v1) o).setVisible(false);
+            ((View) o).setVisible(false);
             views.get(0).setVisible(true);
         }
     }

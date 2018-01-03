@@ -9,36 +9,7 @@ package Model;
  *
  * @author barrerat
  */
-class Symbole {
-    
-    private Forme forme;
-    
-    public Symbole(Forme forme){
-        this.forme = forme;
-    }
-
-    /**
-     * @return the forme
-     */
-    public Forme getForme() {
-        return forme;
-    }
-
-    /**
-     * @param forme the forme to set
-     */
-    public void setForme(Forme forme) {
-        this.forme = forme;
-    }
-    
-    public String toString(){
-        if(this.forme == Forme.croix){
-            return "X";
-        }
-        else{
-            return "O";
-        }
-    }
-    
-    
+public enum Symbole {
+    O,
+    X,
 }
