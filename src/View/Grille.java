@@ -65,7 +65,7 @@ public class Grille {
         btnquitter.setPreferredSize(new Dimension(250,50));
         
          //Panel Center
-         centerPanel.setLayout(new GridLayout(3,3));
+         centerPanel.setLayout(new GridLayout(3,3,4,4));
          int n = 3;
         for (int i=0;i<n;i++){
 			for (int j=0;j<n;j++){
