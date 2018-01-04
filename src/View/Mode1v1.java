@@ -7,7 +7,9 @@ package View;
 
 import Controller.Message;
 
-import static Model.Forme.*;
+
+import Model.Symbole;
+import static Model.Symbole.*;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -38,7 +40,7 @@ public class Mode1v1 extends View {
         public Mode1v1(){
         window = new JFrame();
         window.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
-        window.setSize(800,500);
+        window.setSize(800,200);
         window.setTitle("Mode de Jeu : 1v1");
         window.setLocationRelativeTo(null);
         
@@ -50,14 +52,15 @@ public class Mode1v1 extends View {
          j1 = new JLabel("Joueur 1", SwingConstants.CENTER);
          j2= new JLabel("Joueur 2", SwingConstants.CENTER);
          
-        ArrayList<Forme> symbole = new ArrayList<>(); //Doit être dans le contrôleur//
-        symbole.add(croix);                 //On doit pouvoir add avec getTuilesAccessibles//
-        symbole.add(rond);
+        ArrayList<Symbole> symbole = new ArrayList<>(); //Doit être dans le contrôleur//
+        symbole.add(X);                 //On doit pouvoir add avec getTuilesAccessibles//
+        symbole.add(O);
     
         this.listedep = new JComboBox(symbole.toArray());
         this.listedep2 = new JComboBox(symbole.toArray());
     
-    
+        
+        
         this.btnretour = new JButton("Retour") ;
         this.btnlaunchgame= new JButton("Lancer Jeu");
     
@@ -75,11 +78,11 @@ public class Mode1v1 extends View {
         panelBoutons.add(btnlaunchgame);
       
         
+        mainPanels.add(new JLabel());
         mainPanels.add(j1);
-        mainPanels.add(new JLabel());
         mainPanels.add(j2);
+        mainPanels.add(new JLabel("Votre Symbole: "));
         mainPanels.add(listedep);
-        mainPanels.add(new JLabel());
         mainPanels.add(listedep2);
         mainPanels.add(new JLabel());
         mainPanels.add(new JLabel());
