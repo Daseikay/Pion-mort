@@ -5,8 +5,11 @@
  */
 package View;
 
+import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 
 /**
@@ -16,17 +19,32 @@ import javax.swing.JFrame;
 public class ModeTournoi {
 
     private final JFrame window;
-
+    private final JTextField nbjoueur;
     
     
         public ModeTournoi(){
         window = new JFrame();
         window.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
-        window.setSize(800,500);
+        window.setSize(800,200);
         window.setTitle("Mode de Jeu : Tournoi");
         window.setLocationRelativeTo(null);
         window.setVisible(true);
         window.setResizable(false);
+        
+        
+        window.setLayout(new GridLayout(3,3));
+        
+        nbjoueur = new JTextField();
+        
+        window.add(new JLabel());
+        window.add(new JLabel());
+        window.add(new JLabel("Nombre de joueurs"));
+        window.add(new JLabel());
+        window.add(new JLabel());
+        window.add(nbjoueur);
+        window.add(new JLabel());
+        window.add(new JLabel());
+        window.add(new JLabel());
         
         }
     
