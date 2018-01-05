@@ -7,4 +7,7 @@ public enum Message {
     QUITTER,
     REGLES,
     RETOUR,
+    LANCERJEU,
+    MSG,
+    REJOUER,
 }

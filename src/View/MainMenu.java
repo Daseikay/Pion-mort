@@ -6,6 +6,7 @@
 package View;
 
 import Controller.Message;
+import Model.Joueur;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -170,6 +171,11 @@ public class MainMenu extends View {
     @Override
     public void setVisible(Boolean b) {
         window.setVisible(b);
+    }
+
+    @Override
+    public void aClique(int arg, Joueur joueurCourant) {
+
     }
 
     public static void main(String [] args) {

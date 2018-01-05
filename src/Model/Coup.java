@@ -15,8 +15,8 @@ public class Coup {
     private Case caseJouee;
 
     public Coup(Joueur joueur, Case caseJouee){
-        this.joueur = joueur;
-        this.caseJouee = caseJouee;
+        setJoueur(joueur);
+        setCaseJouee(caseJouee);
     }
 
     public Joueur getJoueur() {
@@ -24,8 +24,19 @@ public class Coup {
     }
 
     public int getNumCase() {
-        return caseJouee.getNumero();
+        return getCaseJouee().getNumero();
     }
 
-    
+
+    public void setJoueur(Joueur joueur) {
+        this.joueur = joueur;
+    }
+
+    public Case getCaseJouee() {
+        return caseJouee;
+    }
+
+    public void setCaseJouee(Case caseJouee) {
+        this.caseJouee = caseJouee;
+    }
 }

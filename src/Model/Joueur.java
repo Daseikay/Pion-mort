@@ -13,16 +13,14 @@ import java.util.ArrayList;
  * @author Théo
  */
 public class Joueur {
-    private String pseudo;
     private int score;
     private Symbole symbole;
     private ArrayList<Case> casesJouees = new ArrayList<>();
 
 
-    public Joueur (String nom,Symbole symbole) {
-        this.setPseudo(nom);
+    public Joueur (Symbole symbole) {
         this.setScore(0);
-        this.setSymbole(symbole);
+        this.symbole = symbole;
     }
 
     public Symbole getSymbole() {
@@ -37,14 +35,6 @@ public class Joueur {
         getCasesJouees().clear();
     }
 
-
-    public String getPseudo() {
-        return pseudo;
-    }
-
-    public void setPseudo(String pseudo) {
-        this.pseudo = pseudo;
-    }
 
     public int getScore() {
         return score;
@@ -117,6 +107,11 @@ public class Joueur {
         return win;
     }
 
+    public void supprDerniereCaseJouee() {//supprime la dernière case qui a été ajouté dans la collection de case du joueur
+        if (!casesJouees.isEmpty()) {
+            casesJouees.remove(casesJouees.size() - 1);
+        }
+    }
 
 
 

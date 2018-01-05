@@ -5,6 +5,8 @@
  */
 package View;
 
+import Model.Joueur;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -58,6 +60,11 @@ public class Rules extends View {
     @Override
     public void setVisible(Boolean b) {
         window.setVisible(b);
+    }
+
+    @Override
+    public void aClique(int arg, Joueur joueurCourant) {
+
     }
 
 
